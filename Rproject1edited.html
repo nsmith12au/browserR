@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R project 1 sample code.</title>
+  <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+  <link rel='shortcut icon' type='image/x-icon' href='https://www.datacamp.com/assets/favicon.ico'/>
+  <style>
+    .exercise {
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+
+ <div class="exercise">
+    <div class="title">
+      <h2>Here's the R commands that would be needed to do a couple parts of problem 1 of Project 1.  <br/><br/>Just hit the RUN button.  To quit viewing the plot created and enter additional commands into R, just click the R console tab.<br/><br/>
+
+This widget works with most browsers, but it does not work well with the Safari browser.  If you have a Mac, it should work fine using using Chrome.  If all else fails, the nuclear option is to just install the software by visiting <a href="https://www.r-project.org"> https://www.r-project.org/</a>.<br/><br/>
+
+Once you hit the RUN button, the right pane will contain a working R console where you can execute any additional R commands you like.  Note that any text after the # symbol is treated as a comment (not executed) by R.
+<h2>
+    </div>
+    <div data-datacamp-exercise data-lang="r" data-height="500">
+      <code data-type="pre-exercise-code"># no pec</code>
+      <code data-type="sample-code">
+# Read in the data into a data frame named peyton.
+peyton = read.csv("https://raw.githubusercontent.com/nsmith12au/browserR/refs/heads/main/manning.csv", header=TRUE)
+# Take a look at the data's header.
+head(peyton)
+# Now, compute the mean and sample standard deviation of the column Yds	in data frame peyton.
+mean(peyton$Yds)
+sd(peyton$Yds)
+# Finally, let's create a histogram of the data in column Yds.
+hist(peyton$Yds, xlab="Passing Yards", main="Passing Yards per Game for Peyton Manning", col="orange")
+	
+      </code>
+       </code>
+    </div>
+  </div>
+         </p>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
