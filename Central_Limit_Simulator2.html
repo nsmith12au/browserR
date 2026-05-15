@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Central Limit Theorem Illustration</title>
+  <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+  <link rel='shortcut icon' type='image/x-icon' href='https://www.datacamp.com/assets/favicon.ico'/>
+  <style>
+    .exercise {
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="exercise">
+    <div class="title">
+      <h2>A Central Limit Theorem Illustrator.</h2><br>
+	 <h3>It is estimated that the percentage of 1, 2, 5, 10, 20, 50, and 100 dollar bills in circulation is 31%, 3%, 7%, 5%, 23%, 4%, and 27% respectively.  Imagine drawing repeated samples at random from this population of a given size, where you compute the average dollar value of the bills in each sample.<br><br>
+Hit the RUN button to simulate this process for sample sizes of size 1-30.  You will see a different histogram for samples of size 1 through 30 (use the arrows underneath the graphs to scroll through them), and observe that while the distributions do not look at all normal when the sample size is small, the distribution of the sample means looks more and more like a normal distribution as the number of bills sampled at a time increases.<br><br>
+Also notice that the histograms get progrssively narrower (lower variance/standard deviation) as the sample size increases.
+</h3>
+<br><br>
+<h4>This widget is optimized for use with Google Chrome.  Other browsers may not be supported.</h4>
+    </div>
+    <div data-datacamp-exercise data-lang="r" data-height="500">
+      <code data-type="pre-exercise-code"># no pec</code>
+      <code data-type="sample-code">
+# It is estimated that the percentage of 1, 2, 5, 10, 20, 50, and 100 dollar bills in circulation is
+# 31%, 3%, 7%, 5%, 23%, 4%, and 27% respectively.
+# Suppose you pick a random sample of bills and see what the mean bill value is in that sample.  The code below will create a dynamic illustration of this problem.
+centlimsim = function(numsamp, sampsize, dataset)
+{
+par(mfrow=c(2,3))
+for(j in 1:sampsize)
+{
+means=NULL
+for(i in 1:numsamp)
+{
+sampledata = sample(dataset, size=j, replace=TRUE)
+means = c(means, mean(sampledata))
+}
+hist(means, main=paste("Sample means, taking", j, "bills at a time"), xlab=paste("Sample mean of", j, "bills sampled at random"), xlim=c(min(dataset), max(dataset)),col="green")
+}
+}
+# Let's create a set of bills to sample from.
+
+bills = sample(c(1,2,5,10,20,50,100), size=1000000, prob=c(.31,.03,.07,.05,.23,.04,.26), replace=TRUE)
+#  Now, the centlimsim function will draw many samples of a given size, compute the mean of each sample and produce a histrogram of the sample means.
+#  The code below will draw 1000 samples of size 30, sampling from the data in the bills dataset.
+#  You could of course change the number of samples, the sample size, and the data set to sample from as you like.
+centlimsim(1000, 30, bills)
+      </code>
+       </code>
+    </div>
+  </div>
+         </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+ 
+
+</body>
+</html>
