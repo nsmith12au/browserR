@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R project 1 sample code.</title>
+  <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+  <link rel='shortcut icon' type='image/x-icon' href='https://www.datacamp.com/assets/favicon.ico'/>
+  <style>
+    .exercise {
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+
+ <div class="exercise">
+    <div class="title">
+      <h2>Here's the data used in Project 1.  <br/><br/>Just hit the RUN button.<br/><br/>
+
+This widget works with most browsers, but it does not work well with the Safari browser.  If you have a Mac, it should work fine using using Chrome.  If all else fails, the nuclear option is to just install the software by visiting <a href="https://www.r-project.org"> https://www.r-project.org/</a>.<br/><br/>
+
+Once you hit the RUN button, the right pane will contain a working R console where you can execute any additional R commands you like.  Note that any text after the # symbol is treated as a comment (not executed) by R.
+	  </h2>
+    </div>
+    <div data-datacamp-exercise data-lang="r" data-height="500">
+      <code data-type="pre-exercise-code"># no pec</code>
+      <code data-type="sample-code">
+# Problem 1 - Peyton Manning data.
+peyton = read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSqreCwpkMAbhl9XZkahUKJBbH7l1folf3PeXiF3ImcA9n9d1yAYNRWvSsUIMvCshP4JKAy5Mq_1M7x/pub?gid=688590225&single=true&output=csv", header=TRUE)
+head(peyton)
+# Problems 2 and 3 - Augusta weather data.
+augusta = read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQMJYgnZ5IWV-gNfh7Sg9CdEtAC9X8vQpjJ-0g7S7-KEASEnLJ2kQpmQKjh4FzH7dwnhAvZFwv4YNg9/pub?gid=1733968212&single=true&output=csv", header=TRUE)
+head(augusta)
+      </code>
+       </code>
+    </div>
+  </div>
+         </p>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
