@@ -38,6 +38,7 @@ spamweekly = rpois(52, lambda=5)
 spamweekly
 spamdaily =  rpois(365, lambda=5/7)
 spamdaily
+# Presenting the number of daily spam texts in a frequency table.		  
 table(spamdaily)
 # Simulating 100 random students taking the SAT verbal exam.
 students = rnorm(100, mean=500, sd=100)
