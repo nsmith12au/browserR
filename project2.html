@@ -33,7 +33,7 @@ days = rgeom(100, prob=.05)
 sort(days)
 days = days+1
 sort(days)
-# Simulating number of spam texts recieved per week and per day for a one year period, assuming an average of 5 spam texts per day.
+# Simulating number of spam texts recieved per week and per day for a one year period, assuming an average of 5 spam texts per week.
 spamweekly = rpois(52, lambda=5)
 spamweekly
 spamdaily =  rpois(365, lambda=5/7)
