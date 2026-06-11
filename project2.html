@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R project 1 sample code.</title>
+  <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+  <link rel='shortcut icon' type='image/x-icon' href='https://www.datacamp.com/assets/favicon.ico'/>
+  <style>
+    .exercise {
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+
+ <div class="exercise">
+    <div class="title">
+      <h2>Here's some of the sample R commands in the preamble to project 2.  Your random simulations will be different because they are...well...random. <br/><br/>Just hit the RUN button.<br/><br/>
+
+This widget works with most browsers, but it does not work well with the Safari browser.  If you have a Mac, it should work fine using using Chrome.  If all else fails, the nuclear option is to just install the software by visiting <a href="https://www.r-project.org"> https://www.r-project.org/</a>.<br/><br/>
+
+Once you hit the RUN button, the right pane will contain a working R console where you can execute any additional R commands you like.  Note that any text after the # symbol is treated as a comment (not executed) by R.
+	  </h2>
+    </div>
+    <div data-datacamp-exercise data-lang="r" data-height="500">
+      <code data-type="pre-exercise-code"># no pec</code>
+      <code data-type="sample-code">
+# Simulating how many internet outages there will be for 100 customers in a year, assuming 5 percent probability of an outage on a given day.
+outages = rbinom(100, size=365, prob=.05)
+sort(outages)        
+# Simulating number of days before the first internet outage and day number of the first outage.
+days = rgeom(100, prob=.05)
+sort(days)
+days = days+1
+sort(days)
+# Simulating number of spam texts recieved per week and per day for a one year period.
+spamweekly = rpois(52, lambda=5)
+spamweekly
+spamdaily =  rpois(365, lambda=5/7)
+spamdaily
+table(spamdaily)
+# Simulating 100 random students taking the SAT verbal.
+students = rnorm(100, mean=500, sd=100)
+students
+# Randomly selecting 10 students in a public speaking class to deliver their speech today.
+speakers = sample(1:30, size=10, replace=FALSE)
+speakers
+      </code>
+       </code>
+    </div>
+  </div>
+         </p>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
